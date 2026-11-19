@@ -69,10 +69,7 @@ def ensure_no_overlap(
 
 
 def main() -> None:
-    ranges = [
-        SequenceRange("850", "040", 1),
-        SequenceRange("050", "060", 2),
-    ]
+    ranges = [SequenceRange("850", "895", 1)]
     candidate = SequenceRange("900", "920", 1)
     ensure_no_overlap(candidate, ranges)
     print(f"Faixa {candidate.start}–{candidate.end}, ciclo {candidate.cycle}: válida")
